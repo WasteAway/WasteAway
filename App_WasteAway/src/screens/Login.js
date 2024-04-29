@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView, useWindowDimensions } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Login() {
@@ -9,6 +9,9 @@ export default function Login() {
     return (
         <>
             <SafeAreaView style={styles.container}>
+                <ScrollView contentContainerStyle={styles.scrollContent}>
+
+                    <View style={styles.insideScroll}>
                         <View style={styles.mainContent}>
 
                             <View style={styles.inputsBox}>
@@ -38,6 +41,11 @@ export default function Login() {
                         <View>
 
                         </View>
+                    </View>
+
+
+
+                </ScrollView>
             </SafeAreaView>
         </>
     );
@@ -52,6 +60,14 @@ const styles = StyleSheet.create({
         paddingRight: 30,
         paddingLeft: 30,
     },
+    scrollContent: {
+        flex: 1,
+        justifyContent: 'center',
+    },
+    insideScroll: {
+        height: 400,
+
+    },
     mainContent: {
         padding: 20,
         height: 400,
@@ -60,6 +76,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'relative',
+        top: '-20%',
     },
     inputsBox: {
         width: '100%',
