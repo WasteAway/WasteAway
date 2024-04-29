@@ -10,7 +10,9 @@ export default function Login() {
         <>
             <SafeAreaView style={styles.container}>
 
-                    <View style={styles.insideScroll}>
+                <View>
+                    <Text style={styles.screenTitle}>Login</Text>
+                </View>
                         <View style={styles.mainContent}>
 
                             <View style={styles.inputsBox}>
@@ -40,7 +42,6 @@ export default function Login() {
                         <View>
 
                         </View>
-                    </View>
             </SafeAreaView>
         </>
     );
@@ -55,24 +56,18 @@ const styles = StyleSheet.create({
         paddingRight: 30,
         paddingLeft: 30,
     },
-    scrollContent: {
-        flex: 1,
-        justifyContent: 'center',
-    },
-    insideScroll: {
-        height: 400,
-
+    screenTitle:{
+        alignSelf: 'center',
+        color: 'white',
+        fontSize: 50,
+        fontWeight: '600',
+        paddingBottom: 30,
     },
     mainContent: {
         padding: 20,
         height: 400,
         backgroundColor: '#FFF',
         borderRadius: 10,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        top: '-20%',
     },
     inputsBox: {
         width: '100%',
@@ -128,4 +123,3 @@ const styles = StyleSheet.create({
         width: 200,
     }
 })
-
